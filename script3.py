@@ -65,7 +65,7 @@ model = BertModel.from_pretrained("monologg/kobert")
 
 def get_dictionary_definition(word):
     certkey_no = '실제_인증키'  # 실제 인증키 입력
-    API_KEY = '3A330DF07AD3AB0276CEB26E9F5131EE'  # 실제 API 키 입력
+    API_KEY = '0BDDC23E6C674F8550A06A0D6EF4830E'  # 실제 API 키 입력
     url = f'https://opendict.korean.go.kr/api/search?certkey_no={certkey_no}&key={API_KEY}&type_search=search&q={word}&req_type=json'
     
     # API 호출
