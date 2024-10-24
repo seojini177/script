@@ -149,7 +149,7 @@ def answer_question(user_question, df, df2):
         similarities_df2 = cosine_similarity(user_embedding, question_embeddings_df2)
         best_match_index_df2 = similarities_df2.argmax()
 
-        if similarities_df2[0][best_match_index_df2] > 0.5:
+        if similarities_df2[0][best_match_index_df2] > 0.3:
             return df2.iloc[best_match_index_df2]['answer']
         else:
             return "답변을 찾을 수 없습니다."
