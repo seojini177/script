@@ -114,7 +114,7 @@ def answer_question(user_question, df, df2):
     best_match_index = similarities.argmax()
     
     # 유사도가 0.5 이하일 경우 df2에서 일상 대화를 찾음
-    if similarities[0][best_match_index] > 0.5:
+    if similarities[0][best_match_index] > 0.7:
         return df.iloc[best_match_index]['answer']
     else:
         # df2에서 일상적인 대화를 찾는 로직 추가
